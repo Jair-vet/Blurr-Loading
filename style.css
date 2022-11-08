@@ -1,12 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@800&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Muli, mulish', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,57 +14,21 @@ body {
     overflow: hidden;
     margin: 0;
     background-color: rgb(28, 26, 26);
+    color: #fff;
 }
 
-.container {
-    display: flex;
-    width: 90vw;
-}
-
-.title {
-    color: aliceblue;
-    font-weight: 700;
-}
-
-.panel {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 50px;
-    color: white;
-    cursor: pointer;
-    flex: 0.5;
-    margin: 10px;
-    position: relative;
-    transition: flex 0.7s ease-in;
-}
-
-.panel h3 {
-    font-size: 24px;
+.bg {
+    background: url('https://bs-uploads.toptal.io/blackfish-uploads/components/blog_post_page/content/cover_image_file/cover_image/687822/retina_1708x683_cover-react-context-api-4929b3703a1a7082d99b53eb1bbfc31f.png') no-repeat center center/cover;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    opacity: 0;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px);
 }
 
-.panel.active {
-    flex: 5;
-}
-
-.panel.active h3{
-    opacity: 1;
-    transition: opacity 0.3s ease-in 0.4s;
-}
-
-@media (max-width: 768px) {  
-    .container {
-        width: 100vw;
-    }
-
-    .panel:nth-of-type(4),
-    .panel:nth-of-type(5){
-        display: none;
-    }
+.loading-text {
+    font-size: 50px;
+    color: #fff;
 }
